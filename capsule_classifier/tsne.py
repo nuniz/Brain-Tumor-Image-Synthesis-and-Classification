@@ -8,11 +8,13 @@ if __name__ == '__main__':
     flags = Flags()
     flags.OneDataSet = True
 
+    # Load the dataset
     image_set = load_data_set(flags)
     net, total_params, total_trainable_params = make_model(flags)
     print("Defined model: " + flags.model_name + "  Number of parameters {}\{} \n"
           .format(total_trainable_params, total_params))
 
+    # Remove the classification layer of the network
     net.fc = nn.Sequential()
     net.to(device)
     net.cuda()
@@ -25,6 +27,7 @@ if __name__ == '__main__':
     features = []
     labels_vector = []
 
+    # Compute t-SNE
     for i, (labels, inputs) in enumerate(loader):
           labels = labels.cuda()
           inputs = inputs.cuda()

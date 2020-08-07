@@ -17,6 +17,19 @@ torch.set_grad_enabled(False)
 
 
 def batch_predict(inputs, net = net):
+    """
+    Make prediction of batch images
+
+    Arguments
+    ---------
+    images
+    network
+
+    Outputs
+    ---------
+    prediction
+
+    """
     inputs = inputs.astype('float32')
     inputs = torch.tensor(inputs)
     inputs = torch.transpose(inputs, 1,3)
@@ -31,6 +44,17 @@ def batch_predict(inputs, net = net):
 
 
 def plot_images_lime(inputs, labels, flags, label_to_explain = 1, num_features=1, num_samples=20, columns=4, rows=5):
+    """
+    Plot region of interest in line
+
+    Arguments
+    ---------
+    inputs
+    labels
+    flags
+
+
+    """
     class_names = flags.target_label
     fig = plt.figure(figsize=(15, 15))
     end = int(flags.test_batch_size + 1)
@@ -52,6 +76,19 @@ def plot_images_lime(inputs, labels, flags, label_to_explain = 1, num_features=1
 
 
 def calculate_lime(img, label_to_explain, num_features, num_samples):
+    """
+    Calculate the lime
+
+    Arguments
+    ---------
+    images
+    labels to explain
+    number of features = 1
+    number of samples = 1
+    ---------
+    explain ratio
+
+    """
     explainer = lime_image.LimeImageExplainer()
     img = torch.Tensor.cpu(img).detach().numpy()
     img = np.transpose(img, (1, 2, 0))
@@ -72,6 +109,7 @@ if __name__ == '__main__':
     flags.OneDataSet = True
     flags.test_batch_size = 4
 
+    # Load the dataset
     image_set = load_data_set(flags)
     net, total_params, total_trainable_params = make_model(flags)
     print("Defined model: " + flags.model_name + "  Number of parameters {}\{} \n"
@@ -84,6 +122,7 @@ if __name__ == '__main__':
                                               batch_size=flags.test_batch_size)  # , num_workers = 4)
 
 
+    # Calculate lime and display
     for i, (labels, inputs) in enumerate(loader):
         labels = labels.cuda()
         inputs = inputs.cuda()

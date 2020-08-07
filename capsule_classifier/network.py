@@ -147,6 +147,7 @@ def make_model(flags):
     Arguments
     ---------
     flags
+
     Outputs
     ---------
     model

@@ -30,9 +30,9 @@ The dataset can be found in this link: https://figshare.com/articles/brain_tumor
 
 * Use the generative model to create train & test dataset pickle files.
 
-** Our modified pix2pix model creates syntethic data in addition to the original data. 
+    * Our modified pix2pix model creates syntethic data in addition to the original data. 
 
-** The code and instruction are given in the generative_model folder.
+    * The code and instruction are given in the generative_model folder.
 
 * Use the classification models (Resnet50/ Our capsule classifier) as described in the capsule classifier folder.
 

@@ -48,7 +48,7 @@ The dataset can be found in this link: https://figshare.com/articles/brain_tumor
 * You have to make a pickle of the traninig and the testing datasets.
 
 ### Flags
-Change the following variables:
+* Change the following variables:
 
         Train - binary flag
         Test - binary flag
@@ -61,10 +61,10 @@ Change the following variables:
         data_path - A path to the pkl file of the traninig data
         data_test_path - A path to the pkl of the test data
         
- Keep the other variables for the original value
+ * Keep the other variables for the original value
 
 ### Training/ Testing
-Run the script train.py.
+* Run the script train.py.
 
 ### t-SNE
-Run the script tsne.py after you have a trained model.
+* Run the script tsne.py after you have a trained model.

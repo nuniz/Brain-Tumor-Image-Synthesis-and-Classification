@@ -54,7 +54,7 @@ The dataset can be found in this link: https://figshare.com/articles/brain_tumor
 * Each element of the pickle is build from 2 fields:
    * Image (size of 512x512) and a label (0-2).
    * The elements are append into numpy array and than save into pickle file.
-* You have to make a pickle of the traninig and the testing datasets.
+* You have to make a pickle of the train and the test datasets.
 
 ### Flags
 * Change the following variables:
@@ -70,7 +70,7 @@ The dataset can be found in this link: https://figshare.com/articles/brain_tumor
         data_path - A path to the pkl file of the traninig data
         data_test_path - A path to the pkl of the test data
         
- * Keep the other variables for the original value
+ * Keep the other variables values.
 
 ### Training/ Testing
 * Run the script train.py.

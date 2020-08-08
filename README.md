@@ -57,20 +57,7 @@ We used the following code parts:
       • Data augmentation (rotate) for the classifiers [https://github.com/aksh-ai/neuralBlack].
       • Convolutional capsule building block and dynamic routing pytorch implementation from CapsPix2Pix paper [https://github.com/CherBass/CapsPix2Pix].
       
-
-# Code Instructions:
-
-* Use the generative model to create train & test dataset pickle files.
-
-    * Our modified pix2pix model creates syntethic data in addition to the original data. 
-
-    * The code and instruction are given in the generative_model folder.
-
-* Use the classification models (Resnet50/ Our capsule classifier) as described in the capsule classifier folder.
-
-## Generative Model:
-
-### Modiciation of the pix2pix implementation
+#### Modiciation of the pix2pix code
 We made the following modification to the pix2pix architecture:
 * We based on the pix2pix architecture for the cGAN [8].
 * We changed the input mask to 1D channel (instead of 3D
@@ -87,6 +74,18 @@ We relied on the original pix2pix implementation and modified the following file
 * network.py
 * test.py
 * base_dataset.py
+
+# Code Instructions:
+
+* Use the generative model to create train & test dataset pickle files.
+
+    * Our modified pix2pix model creates syntethic data in addition to the original data. 
+
+    * The code and instruction are given in the generative_model folder.
+
+* Use the classification models (Resnet50/ Our capsule classifier) as described in the capsule classifier folder.
+
+## Generative Model:
 
 ### Preprocess
 The brain MRI dataset has grayscale images inside brain_tumor folder where each datum is a .mat file.

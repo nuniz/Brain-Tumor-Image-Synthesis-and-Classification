@@ -18,3 +18,16 @@ The classificaiton performance was evaluated quantitatively using accuracy and F
 The best results of 93\% accuracy and F1 score of 92\%, were obtained when the classifier pre-trained 
 on 7,000 synthesised images and then trained on the original data using a 7-fold cross-validation. 
 Our method performs as well as the Resnet50 state-of-the-art deep network, with 9x less parameters.
+
+# Dataset
+For all our experiments, we used the 'Brain Tumor' dataset, proposed by Cheng Jun et al.
+
+The dataset can be found in this link: https://figshare.com/articles/brain_tumor_dataset/1512427
+
+# How to run the code:
+
+First you have to use the generative model in order to create pickle files of the dataset.
+
+You may use our modified pix2pix model in order to create syntethic data in addition to the original data. The code and instruction are shown in the generative_model folder.
+
+FInally you can use the classification models (Resnet50/ Our capsule classifier) as described in the capsule classifier folder.

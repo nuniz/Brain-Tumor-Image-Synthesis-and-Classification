@@ -1,4 +1,4 @@
-# brain_tumor_classification_dlmi_2020
+# Brain Tumor Classification DLMI 2020
 
 ## Description
 Classification of Brain Tumors from MRI Images Using a Capsule Classifier and Image Synthesis.

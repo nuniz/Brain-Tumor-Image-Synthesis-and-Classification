@@ -4,7 +4,7 @@
 Get the pickle file of the dataset:
 
 Each element of the pickle is build from 2 fields:
-  Image and Label.
+  Image (size of 512x512) and a label (0-2).
   
 The elements are append into numpy array and than save into pickle.
 

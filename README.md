@@ -21,10 +21,6 @@ The best results of 93\% accuracy and F1 score of 92\%, were obtained when the c
 on 7,000 synthesised images and then trained on the original data using a 7-fold cross-validation. 
 Our method performs as well as the Resnet50 state-of-the-art deep network, with 9x less parameters.
 
-![The suggested architecture for the classifier](https://raw.githubusercontent.com/nuniz/brain_tumor_classification_dlmi_2020/master/classifier.png){:height="700px" width="400px"}
-![Syntethic Meningioma MRI images](https://raw.githubusercontent.com/nuniz/brain_tumor_classification_dlmi_2020/master/angle.png){:height="700px" width="400px"}
-
-
 ## Dataset
 For all our experiments, we used the 'Brain Tumor' dataset, proposed by Cheng Jun et al.
 
@@ -106,3 +102,48 @@ We used the following code parts:
       • We based our cGAN on Pix2Pix pytorch implementation [https://github.com/phillipi/pix2pix].
       • Data augmentation (rotate) for the classifiers [https://github.com/aksh-ai/neuralBlack].
       • Convolutional capsule building block and dynamic routing pytorch implementation from CapsPix2Pix paper [https://github.com/CherBass/CapsPix2Pix].
+      
+ ## Capsule network architecture
+![The suggested architecture for the classifier](https://raw.githubusercontent.com/nuniz/brain_tumor_classification_dlmi_2020/master/classifier.png)
+Defined model: capsule  Number of parameters 3827660\3827660 
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1          [-1, 1, 512, 512]              26
+         LeakyReLU-2          [-1, 1, 512, 512]               0
+            Conv2d-3         [-1, 64, 256, 256]           1,088
+       BatchNorm2d-4         [-1, 64, 256, 256]             128
+    conv_cap_layer-5      [-1, 1, 64, 256, 256]               0
+            Conv2d-6        [-1, 128, 128, 128]         131,200
+       BatchNorm2d-7        [-1, 128, 128, 128]             256
+    conv_cap_layer-8     [-1, 1, 128, 128, 128]               0
+            Conv2d-9          [-1, 256, 64, 64]         524,544
+      BatchNorm2d-10          [-1, 256, 64, 64]             512
+   conv_cap_layer-11       [-1, 1, 256, 64, 64]               0
+           Conv2d-12          [-1, 512, 32, 32]       2,097,664
+      BatchNorm2d-13          [-1, 512, 32, 32]           1,024
+   conv_cap_layer-14       [-1, 1, 512, 32, 32]               0
+           Conv2d-15            [-1, 1, 29, 29]           8,193
+        LeakyReLU-16            [-1, 1, 29, 29]               0
+           Linear-17                  [-1, 841]         708,122
+        LeakyReLU-18                  [-1, 841]               0
+          Dropout-19                  [-1, 841]               0
+           Linear-20                  [-1, 420]         353,640
+        LeakyReLU-21                  [-1, 420]               0
+          Dropout-22                  [-1, 420]               0
+           Linear-23                    [-1, 3]           1,263
+       LogSoftmax-24                    [-1, 3]               0
+================================================================
+Total params: 3,827,660
+Trainable params: 3,827,660
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 1.00
+Forward/backward pass size (MB): 184.04
+Params size (MB): 14.60
+Estimated Total Size (MB): 199.64
+----------------------------------------------------------------
+
+
+## Generated images @rotate
+![Syntethic Meningioma MRI images](https://raw.githubusercontent.com/nuniz/brain_tumor_classification_dlmi_2020/master/angle.png)

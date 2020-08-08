@@ -24,9 +24,9 @@
  * Keep the other variables values.
 
 ### Train and evaluate
-* Change the flag in the [flags.py](capsule_classifier/flags.py) file.
-* Run the script [train.py](capsule_classifier/train.py).
+* Change the flag in the [flags.py](flags.py) file.
+* Run the script [train.py](train.py).
 
 ### t-SNE
-* Run the script [tsne.py](capsule_classifier/tsne.py) after you have a trained model.
+* Run the script [tsne.py](tsne.py) after you have a trained model.
 

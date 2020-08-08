@@ -1,16 +1,14 @@
-# How to run the code:
+## Capsule classifier:
 
-# Pickle
-Get the pickle file of the dataset:
+### Pickle
+* Make the pickle file of the dataset (as described in the generative model).
+* Each element of the pickle is build from 2 fields:
+   * Image (size of 512x512) and a label (0-2).
+   * The elements are append into numpy array and than save into pickle file.
+* You have to make a pickle of the traninig and the testing datasets.
 
-Each element of the pickle is build from 2 fields:
-  Image (size of 512x512) and a label (0-2).
-  
-The elements are append into numpy array and than save into pickle file.
-You have to save a pickle of the traninig and the testing data.
-
-# Flags
-Change the following variables:
+### Flags
+* Change the following variables:
 
         Train - binary flag
         Test - binary flag
@@ -23,10 +21,10 @@ Change the following variables:
         data_path - A path to the pkl file of the traninig data
         data_test_path - A path to the pkl of the test data
         
- Keep the other variables for the original value
+ * Keep the other variables for the original value
 
-# Training/ Testing
-Run the script train.py.
+### Training/ Testing
+* Run the script train.py.
 
-# t-SNE
-Run the script tsne.py after you have a trained model.
+### t-SNE
+* Run the script tsne.py after you have a trained model.

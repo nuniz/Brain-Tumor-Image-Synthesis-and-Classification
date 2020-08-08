@@ -30,7 +30,7 @@ The dataset can be found in this link: https://figshare.com/articles/brain_tumor
 
 ### Research
 Special thank to Cher Bass for publishing ’Image Synthesis with a Convolutional Capsule Generative Adversarial
-Network’ [7] and inspired our work. 
+Network’ and inspired our work. 
 
 We learned a lot from
 the paper about capsule networks, convolutional capsules and
@@ -59,7 +59,6 @@ We used the following code parts:
       
 #### Modiciation of the pix2pix code
 We made the following modification to the pix2pix architecture:
-* We based on the pix2pix architecture for the cGAN [8].
 * We changed the input mask to 1D channel (instead of 3D
 channel) and modified the network so it could handle image
 size of (512x512) instead of (256x256). 
@@ -68,12 +67,12 @@ size of (512x512) instead of (256x256).
 a latent vector component that was processed through a fully
 connected layer and then concatenated with the input mask
 image.
-* Save the result to pickle file.
+* Save the generated images to pickle file.
 
 We relied on the original pix2pix implementation and modified the following files:
-* network.py
-* test.py
-* base_dataset.py
+* [Datasets](generative_model/models/ network.py). network.py
+* [Datasets](generative_model/test.py). test.py
+* [Datasets](generative_model/data/base_dataset.py). base_dataset.py
 
 # Code Instructions:
 
@@ -92,7 +91,7 @@ The brain MRI dataset has grayscale images inside brain_tumor folder where each 
 
 * Run preprocess.m 
     * it will make 3 directories for each label. 
-    * In order to make the above data compatible for Pix2Pix network, further processing is needed - follow the [Datasets](docs/datasets.md).
+    * In order to make the above data compatible for Pix2Pix network, further processing is needed - follow the [Datasets](generative_model/docs/datasets.md).
 * Run augmentation.m
     * Control the number of desired augmented image per label.
     * Perform a tumor augmentation for later stage by running augmentation.m

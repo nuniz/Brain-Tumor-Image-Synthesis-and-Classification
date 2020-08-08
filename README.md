@@ -73,15 +73,33 @@ We used the following code parts:
 The brain MRI dataset has grayscale images inside brain_tumor folder where each datum is a .mat file.
 
 * Run preprocess.m 
-      * it will make 3 directories for each label. 
-      * In order to make the above data compatible for Pix2Pix network, further processing is needed - follow the [Datasets](docs/datasets.md) in the generative_model  
-            folder.
-* Perform a tumor augmentation for later stage by running augmentation.m - Control the number of desired augmented image per label.
+    * it will make 3 directories for each label. 
+    * In order to make the above data compatible for Pix2Pix network, further processing is needed - follow the [Datasets](docs/datasets.md).
+* Perform a tumor augmentation for later stage by running augmentation.m
+    * Control the number of desired augmented image per label.
 
 ### Training the models
 
+For each label train a GAN with train.py as follows:
+* Start the visdom server before the training:
+```bash
+python -m visdom.server
+```
+* Train a model:
+```bash
+python train.py --dataroot ./datasets/AB --name pix2pix_i --model pix2pix --direction BtoA --input_nc 1 --output_nc 1 --preprocess none --crop_size 512
+
 ### Evaluate and make the pickle file
 
+* Generate synthetic image (test the model): Data directory is of the augmented data from step 2 in Data Proprocessing
+```bash
+python test.py --dataroot ./datasets/AB --name pix2pix_i --model pix2pix --direction BtoA --input_nc 1 --output_nc 1 --preprocess none --crop_size 512 --dataset_mode single 
+
+* test.py makes the required pickle file for the classifier. 
+* It can be applied to the original data as well.
+
+
+```
 ## Capsule classifier:
 
 ### Pickle

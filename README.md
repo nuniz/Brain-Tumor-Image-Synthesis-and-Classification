@@ -41,6 +41,11 @@ The dataset can be found in this link: https://figshare.com/articles/brain_tumor
 * Use the classification models (Resnet50/ Our capsule classifier) as described in the capsule classifier folder.
 
 ## Generative Model:
+### Preprocess
+
+### Training the model
+
+### Evaluate and making the pickle file
 
 ## Capsule classifier:
 

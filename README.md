@@ -69,6 +69,22 @@ We used the following code parts:
 * Use the classification models (Resnet50/ Our capsule classifier) as described in the capsule classifier folder.
 
 ## Generative Model:
+```bash
+We made the following modification to the pix2pix architecture:
+            We based on the pix2pix architecture for the cGAN [8].
+            We changed the input mask to 1D channel (instead of 3D
+            channel) and modified the network so it could handle image
+            size of (512x512) instead of (256x256). We also made the
+            network compatible to depth of 16-bit. Furthermore, we added
+            a latent vector component that was processed through a fully
+            connected layer and then concatenated with the input mask
+            image.
+```
+
+We relied on the original pix2pix implementation and modified the following files:
+* network.py
+* test.py
+
 ### Preprocess
 The brain MRI dataset has grayscale images inside brain_tumor folder where each datum is a .mat file.
 

@@ -3,7 +3,7 @@
 ## Description
 Classification of Brain Tumors from MRI Images Using a Capsule Classifier and Image Synthesis.
 
-Tel Aviv University. DLMI course (0553-5542).  July 2020.
+Tel Aviv University. DLMI course (0553-5542), under the supervision of Prof. Hayit Greenspan.  July 2020.
 
 ## Abstract
 The biggest problem for classifying magnetic resonance images (MRI) with deep learning techniques lies in the number of labelled data. 

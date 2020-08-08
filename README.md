@@ -26,7 +26,7 @@ For all our experiments, we used the 'Brain Tumor' dataset, proposed by Cheng Ju
 
 The dataset can be found in this link: https://figshare.com/articles/brain_tumor_dataset/1512427
 
-## Acknoledgments
+## Acknowledgments
 
 ### Research
 Special thank to Cher Bass for publishing ’Image Synthesis with a Convolutional Capsule Generative Adversarial

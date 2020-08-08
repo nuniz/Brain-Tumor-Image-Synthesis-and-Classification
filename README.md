@@ -56,7 +56,7 @@ The dataset can be found in this link: https://figshare.com/articles/brain_tumor
 
         Train - binary flag
         Test - binary flag
-        Crossvalidation - binary flag
+        check_name - The name of the loaded model
         LoadSavedModel - binary flag if you want to load pretrained model
         FreezeLayer - for the Resnet50 - binary flag.
         Model - "resnet" or "capsule"

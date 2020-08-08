@@ -5,15 +5,15 @@
 * Each element of the pickle is build from 2 fields:
    * Image (size of 512x512) and a label (0-2).
    * The elements are append into numpy array and than save into pickle file.
-* You have to make a pickle of the traninig and the testing datasets.
+* You have to make a pickle of the train and the test datasets.
 
 ### Flags
 * Change the following variables:
 
         Train - binary flag
         Test - binary flag
-        LoadSavedModel - binary flag if you want to load pretrained model
         check_name - The name of the loaded model
+        LoadSavedModel - binary flag if you want to load pretrained model
         FreezeLayer - for the Resnet50 - binary flag.
         Model - "resnet" or "capsule"
         epochs - number of epochs
@@ -21,10 +21,12 @@
         data_path - A path to the pkl file of the traninig data
         data_test_path - A path to the pkl of the test data
         
- * Keep the other variables for the original value
+ * Keep the other variables values.
 
-### Training/ Testing
-* Run the script train.py.
+### Train and evaluate
+* Change the flag in the [flags.py](capsule_classifier/flags.py) file.
+* Run the script [train.py](capsule_classifier/train.py).
 
 ### t-SNE
-* Run the script tsne.py after you have a trained model.
+* Run the script [tsne.py](capsule_classifier/tsne.py) after you have a trained model.
+

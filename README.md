@@ -105,6 +105,7 @@ We used the following code parts:
       
  ## Capsule network architecture
 ![The suggested architecture for the classifier](https://raw.githubusercontent.com/nuniz/brain_tumor_classification_dlmi_2020/master/classifier.png)
+
          Defined model: capsule  Number of parameters 3827660\3827660 
          ----------------------------------------------------------------
                  Layer (type)               Output Shape         Param #

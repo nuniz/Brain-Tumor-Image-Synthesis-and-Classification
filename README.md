@@ -21,8 +21,8 @@ The best results of 93\% accuracy and F1 score of 92\%, were obtained when the c
 on 7,000 synthesised images and then trained on the original data using a 7-fold cross-validation. 
 Our method performs as well as the Resnet50 state-of-the-art deep network, with 9x less parameters.
 
-![The suggested architecture for the classifier](https://raw.githubusercontent.com/nuniz/brain_tumor_classification_dlmi_2020/master/classifier.png)
-![Syntethic Meningioma MRI images](https://raw.githubusercontent.com/nuniz/brain_tumor_classification_dlmi_2020/master/angle.png)
+![The suggested architecture for the classifier](https://raw.githubusercontent.com/nuniz/brain_tumor_classification_dlmi_2020/master/classifier.png){:height="700px" width="400px"}
+![Syntethic Meningioma MRI images](https://raw.githubusercontent.com/nuniz/brain_tumor_classification_dlmi_2020/master/angle.png){:height="700px" width="400px"}
 
 
 ## Dataset

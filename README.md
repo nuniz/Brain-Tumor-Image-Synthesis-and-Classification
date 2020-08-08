@@ -26,7 +26,7 @@ For all our experiments, we used the 'Brain Tumor' dataset, proposed by Cheng Ju
 
 The dataset can be found in this link: https://figshare.com/articles/brain_tumor_dataset/1512427
 
-# How to run the code:
+# Code:
 
 * Use the generative model to create train & test dataset pickle files.
 

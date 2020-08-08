@@ -80,24 +80,29 @@ The dataset can be found in this link: https://figshare.com/articles/brain_tumor
 
 ## ACKNOWLEDGMENTS
 Special thank to Cher Bass for publishing ’Image Synthesis with a Convolutional Capsule Generative Adversarial
-Network’ [7] and inspired our work. We learned a lot from
+Network’ [7] and inspired our work. 
+
+We learned a lot from
 the paper about capsule networks, convolutional capsules and
 conditional GAN.
+
 We also thank M. Bada for publishing the paper ’Classification of Brain Tumors from MRI Images Using a Convolutional
 Neural Network’[3] that taught us about the biological background and helped us to define the problem better.
 
 ## Code
 The code that we written [@pytorch] includes:
-• Data preprocessing [@Matlab].
-• Modified cGAN with a latent vector.
-• Capsule classifier model.
-• t-SNE.
-• Dataloader.
-• Cross-validation.
-• Train and evaluate different classifiers.
-• Resnet50 1D classifier, with an option to freeze layers.
+
+      • Data preprocessing [@Matlab].
+      • Modified cGAN with a latent vector.
+      • Capsule classifier model.
+      • t-SNE.
+      • Dataloader.
+      • Cross-validation.
+      • Train and evaluate different classifiers.
+      • Resnet50 1D classifier, with an option to freeze layers.
 
 We used the following code parts:
-• We based our cGAN on Pix2Pix pytorch implementation [https://github.com/phillipi/pix2pix].
-• Data augmentation (rotate) for the classifiers [https://github.com/aksh-ai/neuralBlack].
-• Convolutional capsule building block and dynamic routing pytorch implementation from CapsPix2Pix paper [https://github.com/CherBass/CapsPix2Pix].
+
+      • We based our cGAN on Pix2Pix pytorch implementation [https://github.com/phillipi/pix2pix].
+      • Data augmentation (rotate) for the classifiers [https://github.com/aksh-ai/neuralBlack].
+      • Convolutional capsule building block and dynamic routing pytorch implementation from CapsPix2Pix paper [https://github.com/CherBass/CapsPix2Pix].

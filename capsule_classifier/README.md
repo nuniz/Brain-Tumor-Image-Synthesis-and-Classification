@@ -5,6 +5,7 @@ Get the pickle file of the dataset:
 
 Each element of the pickle is build from 2 fields:
   Image and Label.
+  
 The elements are append into numpy array and than save into pickle.
 
 # Flags

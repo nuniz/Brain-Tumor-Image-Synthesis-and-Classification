@@ -70,9 +70,9 @@ image.
 * Save the generated images to pickle file.
 
 We relied on the original pix2pix implementation and modified the following files:
-* [Datasets](generative_model/models/ network.py). network.py
-* [Datasets](generative_model/test.py). test.py
-* [Datasets](generative_model/data/base_dataset.py). base_dataset.py
+* [network.py](generative_model/models/ network.py).
+* [test.py](generative_model/test.py).
+* [base_dataset.py](generative_model/data/base_dataset.py).
 
 # Code Instructions:
 
@@ -89,17 +89,17 @@ We relied on the original pix2pix implementation and modified the following file
 ### Preprocess
 The brain MRI dataset has grayscale images inside brain_tumor folder where each datum is a .mat file.
 
-* Run preprocess.m 
+* Run [process.m](preprocess/process.m). 
     * it will make 3 directories for each label. 
     * In order to make the above data compatible for Pix2Pix network, further processing is needed - follow the [Datasets](generative_model/docs/datasets.md).
-* Run augmentation.m
+* Run [augmentation.m](preprocess/augmentation.m)
     * Control the number of desired augmented image per label.
     * Perform a tumor augmentation for later stage by running augmentation.m
 
 
 ### Training the models
 
-For each label train a GAN with train.py as follows:
+For each label train a GAN with [train.py](generative_model/train.py). as follows:
 * Start the visdom server before the training:
 ```bash
 python -m visdom.server
@@ -112,7 +112,7 @@ python train.py --dataroot ./datasets/AB --name pix2pix_i --model pix2pix --dire
 ### Image generation to pkl file
 
 * Generate synthetic image (test the model): Data directory is of the augmented data from step 2 in Data Proprocessing.
-* Run test.py makes the required pickle file for the classifier. 
+* Run [test.py](generative_model/test.py). makes the required pickle file for the classifier. 
 * It can be applied to the original data as well.
 
 ```bash
@@ -143,11 +143,12 @@ python test.py --dataroot ./datasets/AB --name pix2pix_i --model pix2pix --direc
         
  * Keep the other variables values.
 
-### Training/ Testing
-* Run the script train.py.
+### Train and evaluate
+* Change the flag in the [flags.py](capsule_classifier/flags.py) file.
+* Run the script [train.py](capsule_classifier/train.py).
 
 ### t-SNE
-* Run the script tsne.py after you have a trained model.
+* Run the script [tsne.py](capsule_classifier/tsne.py) after you have a trained model.
 
 
  ## Capsule network architecture

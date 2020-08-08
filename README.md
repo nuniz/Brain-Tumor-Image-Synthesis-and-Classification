@@ -195,4 +195,8 @@ python test.py --dataroot ./datasets/AB --name pix2pix_i --model pix2pix --direc
 
 
 ## Generated images @rotate
-![Syntethic Meningioma MRI images](https://raw.githubusercontent.com/nuniz/brain_tumor_classification_dlmi_2020/master/angle.png)
+![Synthetic Meningioma MRI images](https://github.com/nuniz/brain_tumor_classification_dlmi_2020/blob/master/FakeAndMask1.gif)
+
+![Synthetic Tumors](https://github.com/nuniz/brain_tumor_classification_dlmi_2020/blob/master/GAN_example.gif)
+
+![Synthetic Meningioma MRI images](https://raw.githubusercontent.com/nuniz/brain_tumor_classification_dlmi_2020/master/angle.png)

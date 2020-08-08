@@ -41,14 +41,11 @@ The dataset can be found in this link: https://figshare.com/articles/brain_tumor
 ## Capsule classifier:
 
 ### Pickle
-Get the pickle file of the dataset:
-
-Each element of the pickle is build from 2 fields:
-  Image (size of 512x512) and a label (0-2).
-  
-The elements are append into numpy array and than save into pickle file.
-
-You have to make a pickle of the traninig and the testing datasets.
+* Make the pickle file of the dataset (as described in the generative model).
+* Each element of the pickle is build from 2 fields:
+   * Image (size of 512x512) and a label (0-2).
+   * The elements are append into numpy array and than save into pickle file.
+* You have to make a pickle of the traninig and the testing datasets.
 
 ### Flags
 Change the following variables:

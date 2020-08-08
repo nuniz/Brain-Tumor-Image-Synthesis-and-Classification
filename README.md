@@ -70,7 +70,7 @@ image.
 * Save the generated images to pickle file.
 
 We relied on the original pix2pix implementation and modified the following files:
-* [network.py](generative_model/models/ network.py).
+* [network.py](generative_model/models/network.py).
 * [test.py](generative_model/test.py).
 * [base_dataset.py](generative_model/data/base_dataset.py).
 

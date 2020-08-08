@@ -43,9 +43,9 @@ The dataset can be found in this link: https://figshare.com/articles/brain_tumor
 ## Generative Model:
 ### Preprocess
 
-### Training the model
+### Training the models
 
-### Evaluate and making the pickle file
+### Evaluate and make the pickle file
 
 ## Capsule classifier:
 

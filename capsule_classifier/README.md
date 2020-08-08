@@ -9,6 +9,7 @@ The elements are append into numpy array and than save into pickle.
 
 # Flags
 Change the following variables:
+
         Train - binary flag
         Test - binary flag
         Crossvalidation - binary flag

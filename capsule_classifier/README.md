@@ -13,6 +13,7 @@
         Train - binary flag
         Test - binary flag
         LoadSavedModel - binary flag if you want to load pretrained model
+        check_name - The name of the loaded model
         FreezeLayer - for the Resnet50 - binary flag.
         Model - "resnet" or "capsule"
         epochs - number of epochs

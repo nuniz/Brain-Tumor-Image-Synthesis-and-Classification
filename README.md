@@ -70,6 +70,7 @@ We used the following code parts:
 
 ## Generative Model:
 
+### Modiciation of the pix2pix implementation
 We made the following modification to the pix2pix architecture:
 * We based on the pix2pix architecture for the cGAN [8].
 * We changed the input mask to 1D channel (instead of 3D

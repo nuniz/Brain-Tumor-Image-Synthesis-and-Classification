@@ -26,7 +26,9 @@ For all our experiments, we used the 'Brain Tumor' dataset, proposed by Cheng Ju
 
 The dataset can be found in this link: https://figshare.com/articles/brain_tumor_dataset/1512427
 
-## ACKNOWLEDGMENTS
+## Acknoledgments
+
+### Research
 Special thank to Cher Bass for publishing ’Image Synthesis with a Convolutional Capsule Generative Adversarial
 Network’ [7] and inspired our work. 
 
@@ -37,7 +39,7 @@ conditional GAN.
 We also thank M. Bada for publishing the paper ’Classification of Brain Tumors from MRI Images Using a Convolutional
 Neural Network’[3] that taught us about the biological background and helped us to define the problem better.
 
-## Code
+### Code
 The code that we written [@pytorch] includes:
 
       • Data preprocessing [@Matlab].

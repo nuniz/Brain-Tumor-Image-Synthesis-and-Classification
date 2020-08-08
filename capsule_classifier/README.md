@@ -12,7 +12,6 @@
 
         Train - binary flag
         Test - binary flag
-        Crossvalidation - binary flag
         LoadSavedModel - binary flag if you want to load pretrained model
         FreezeLayer - for the Resnet50 - binary flag.
         Model - "resnet" or "capsule"

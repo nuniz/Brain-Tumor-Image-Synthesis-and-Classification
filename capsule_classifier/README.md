@@ -6,7 +6,8 @@ Get the pickle file of the dataset:
 Each element of the pickle is build from 2 fields:
   Image (size of 512x512) and a label (0-2).
   
-The elements are append into numpy array and than save into pickle.
+The elements are append into numpy array and than save into pickle file.
+You have to save a pickle of the traninig and the testing data.
 
 # Flags
 Change the following variables:

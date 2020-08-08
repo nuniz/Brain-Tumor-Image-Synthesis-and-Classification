@@ -1,9 +1,11 @@
 # brain_tumor_classification_dlmi_2020
+
+## Description
 Classification of Brain Tumors from MRI Images Using a Capsule Classifier and Image Synthesis.
 
 Tel Aviv University. DLMI course (0553-5542).  July 2020.
 
-# Abstract
+## Abstract
 The biggest problem for classifying magnetic resonance images (MRI) with deep learning techniques lies in the number of labelled data. 
 Although recent works in the field of neural network have shown promising abilities of classifying brain tumors from brain MRI images, 
 they used very deep and complex network architectures. 
@@ -19,20 +21,22 @@ The best results of 93\% accuracy and F1 score of 92\%, were obtained when the c
 on 7,000 synthesised images and then trained on the original data using a 7-fold cross-validation. 
 Our method performs as well as the Resnet50 state-of-the-art deep network, with 9x less parameters.
 
-# Dataset
+## Dataset
 For all our experiments, we used the 'Brain Tumor' dataset, proposed by Cheng Jun et al.
 
 The dataset can be found in this link: https://figshare.com/articles/brain_tumor_dataset/1512427
 
 # How to run the code:
 
-First you have to use the generative model to create train& test dataset pickle files.
+* Use the generative model to create train & test dataset pickle files.
 
-Our modified pix2pix model creates syntethic data in addition to the original data. 
+** Our modified pix2pix model creates syntethic data in addition to the original data. 
 
-The code and instruction are given in the generative_model folder.
+** The code and instruction are given in the generative_model folder.
 
-Finally you can use the classification models (Resnet50/ Our capsule classifier) as described in the capsule classifier folder.
+* Use the classification models (Resnet50/ Our capsule classifier) as described in the capsule classifier folder.
+
+## Generative Model:
 
 ## Capsule classifier:
 

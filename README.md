@@ -1,14 +1,15 @@
 # Brain Tumor Classification DLMI 2020
 
 ## Description
-This project, conducted at Tel Aviv University as part of the DLMI course (0553-5542) under the guidance of Prof. Hayit Greenspan in July 2020, focuses on the classification of brain tumors from MRI images. Leveraging deep learning techniques, we introduced a novel approach that combines a Capsule Classifier with Image Synthesis using a conditional generative model. 
+This project, conducted at Tel Aviv University as part of the DLMI course (0553-5542) under the guidance of Prof. Hayit Greenspan in July 2020, focuses on the classification of brain tumors from MRI images.
+
+### Methodology
+The primary challenge in classifying MRI images lies in the scarcity of labeled data. Our solution involves a convolutional capsule architecture for classification coupled with data synthesis using a conditional generative model.
+
 
 ![Synthetic Meningioma MRI images](https://github.com/nuniz/brain_tumor_classification_dlmi_2020/blob/master/FakeAndMask1.gif)
 
 ![Synthetic Tumors](https://github.com/nuniz/brain_tumor_classification_dlmi_2020/blob/master/GAN_example.gif)
-
-### Methodology
-The primary challenge in classifying MRI images lies in the scarcity of labeled data. Our solution involves a convolutional capsule architecture for classification coupled with data synthesis using a conditional generative model.
 
 ## Dataset
 For all experiments, we utilized the 'Brain Tumor' dataset proposed by Cheng Jun et al. The dataset can be accessed here: https://figshare.com/articles/brain_tumor_dataset/1512427.

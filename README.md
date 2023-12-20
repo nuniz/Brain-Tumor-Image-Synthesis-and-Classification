@@ -3,6 +3,12 @@
 ## Description
 Classification of Brain Tumors from MRI Images Using a Capsule Classifier and Image Synthesis.
 
+![Synthetic Meningioma MRI images](https://github.com/nuniz/brain_tumor_classification_dlmi_2020/blob/master/FakeAndMask1.gif)
+
+![Synthetic Tumors](https://github.com/nuniz/brain_tumor_classification_dlmi_2020/blob/master/GAN_example.gif)
+
+![Synthetic Meningioma MRI images](https://raw.githubusercontent.com/nuniz/brain_tumor_classification_dlmi_2020/master/angle.png)
+
 Tel Aviv University. DLMI course (0553-5542), under the supervision of Prof. Hayit Greenspan.  July 2020.
 
 ## Abstract
@@ -192,11 +198,3 @@ python test.py --dataroot ./datasets/AB --name pix2pix_i --model pix2pix --direc
          Params size (MB): 14.60
          Estimated Total Size (MB): 199.64
          ----------------------------------------------------------------
-
-
-## Generated images @rotate
-![Synthetic Meningioma MRI images](https://github.com/nuniz/brain_tumor_classification_dlmi_2020/blob/master/FakeAndMask1.gif)
-
-![Synthetic Tumors](https://github.com/nuniz/brain_tumor_classification_dlmi_2020/blob/master/GAN_example.gif)
-
-![Synthetic Meningioma MRI images](https://raw.githubusercontent.com/nuniz/brain_tumor_classification_dlmi_2020/master/angle.png)
